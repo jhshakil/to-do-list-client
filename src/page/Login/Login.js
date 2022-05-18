@@ -11,7 +11,7 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
     const navigate = useNavigate();
 
-    const [signInWithEmailAndPassword, user, error, loading] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth);
 
     if (user) {
         navigate(from, { replace: true });
@@ -33,7 +33,7 @@ const Login = () => {
                 <input className='block m-auto btn w-1/2 md:w-1/4 mt-4 p-2' type="submit" value="Log in" />
             </form>
             <div className='text-center'>
-                <p>Do not account Please register <Link className='text-red-600 font-bold' to='/signup'>Register</Link></p>
+                <p>Do not account Please register <Link className='text-red-600 font-bold' to='/signup'>Sign Up</Link></p>
             </div>
 
         </div>
