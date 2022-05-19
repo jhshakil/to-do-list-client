@@ -8,7 +8,7 @@ const ShowTask = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
         const email = user.email;
-        const url = `http://localhost:5000/item?email=${email}`
+        const url = `https://radiant-beyond-47684.herokuapp.com/item?email=${email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -22,7 +22,7 @@ const ShowTask = () => {
         let newCount = false;
         setAcknowledge(newCount)
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://radiant-beyond-47684.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

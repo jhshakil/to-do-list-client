@@ -12,7 +12,7 @@ const AddTask = () => {
             description: data.description,
             email: user.email
         }
-        const url = 'http://localhost:5000/item'
+        const url = 'https://radiant-beyond-47684.herokuapp.com/item'
         fetch(url, {
             method: 'POST',
             headers: {
