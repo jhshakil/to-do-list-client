@@ -12,7 +12,7 @@ const AddTask = () => {
             description: data.description,
             email: user.email
         }
-        const url = 'https://radiant-beyond-47684.herokuapp.com/item'
+        const url = 'https://to-do-list-server-three.vercel.app/item'
         fetch(url, {
             method: 'POST',
             headers: {
